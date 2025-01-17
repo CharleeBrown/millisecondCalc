@@ -2,6 +2,7 @@ let loc = document.getElementById("showlocation");
 let one = document.getElementById("timeOne");
 let two = document.getElementById("timeTwo");
 let diff = document.getElementById("diff");
+let diffHold;
 
 
 document.addEventListener("keydown", function(event) {
@@ -22,7 +23,12 @@ document.addEventListener("keydown", function(event) {
 	else{
 		let getTwoTime = new Date();
 		two.innerText = getTwoTime.getMilliseconds().toString();
-		diff.innerText = two.innerText.valueOf() - one.innerText.valueOf();
+		diffHold= two.innerText.valueOf() - one.innerText.valueOf();
+		if(diffHold <0){
+			diff.innerText = diffHold * -1;}
+		else{
+			diff.innerText = diffHold;
+		}
 	}
 
 	
