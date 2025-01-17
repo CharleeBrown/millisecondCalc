@@ -1,0 +1,1 @@
+I was interested in creating a web app that calculated the milliseconds between keypresses and showed the difference. 
